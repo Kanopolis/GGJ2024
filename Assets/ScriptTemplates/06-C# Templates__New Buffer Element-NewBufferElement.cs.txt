@@ -1,0 +1,7 @@
+using Unity.Entities;
+
+[InternalBufferCapacity(5)]
+public struct #SCRIPTNAME# : IBufferElementData
+{
+	#NOTRIM#
+}
