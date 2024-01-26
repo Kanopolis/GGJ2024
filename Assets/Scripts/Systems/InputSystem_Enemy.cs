@@ -28,6 +28,7 @@ public partial struct InputSystem_Enemy : ISystem
     }
 
     [BurstCompile]
+    [WithAll(typeof(Enemy))]
     public partial struct InputSystem_EnemyJob : IJobEntity
     {
         public NativeList<float3> PlayerPositions;
@@ -47,10 +48,10 @@ public partial struct InputSystem_Enemy : ISystem
             }
 
 
-            UnityEngine.Debug.Log($"Current Distance Sqr: {closestDistanceSqr}");
+            //UnityEngine.Debug.Log($"Current Distance Sqr: {closestDistanceSqr}");
             if (closestDistanceSqr > enemy.PreferredDistanceToTarget * enemy.PreferredDistanceToTarget)
             {
-                UnityEngine.Debug.Log($"Moving from: {lTrans.Position} in direction {closestPlayerPosition - lTrans.Position}");
+                //UnityEngine.Debug.Log($"Moving from: {lTrans.Position} in direction {closestPlayerPosition - lTrans.Position}");
                 movement.MovementDirection = math.normalizesafe(closestPlayerPosition - lTrans.Position);
             }
             else
