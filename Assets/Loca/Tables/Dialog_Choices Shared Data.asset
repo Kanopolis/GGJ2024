@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Dialog_Choices Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Dialog_Choices
+  m_TableCollectionNameGuidString: 4f232b1183db93c43b3f0521ba414e64
+  m_Entries:
+  - m_Id: 8657271623680
+    m_Key: Choice1_Thief
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8657288400896
+    m_Key: Choice2_Mountains
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8657288400897
+    m_Key: Choice3_Bunnys
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8657288400898
+    m_Key: Choice4_Cacte
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7283273381201051673
+  references:
+    version: 2
+    RefIds:
+    - rid: 7283273381201051673
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1706295146936
