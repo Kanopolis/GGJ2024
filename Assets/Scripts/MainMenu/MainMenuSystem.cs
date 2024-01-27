@@ -5,29 +5,24 @@ public partial class MainMenuSystem : SystemBase
 {
     protected override void OnCreate()
     {
-        RequireForUpdate<>
+        RequireForUpdate<MainMenuTag>();
     }
 
     [BurstCompile]
     protected override void OnUpdate()
     {
-    }
+        UnityEngine.Debug.LogError("Update");
 
-    private static void ExitGame()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-         Application.Quit();
-#endif
+        var job = new MainMenuSystemJob();
+        job.Schedule();
     }
 
     [BurstCompile]
     public partial struct MainMenuSystemJob : IJobEntity
     {
-        public void Execute(in DynamicBuffer<PlayerUIInputBuffer> _playerUIInputBuffer)
+        public void Execute(in DynamicBuffer<PlayerUIInputBuffer> _playerUIInputsBuffer)
         {
-            var player1Buffer = _playerUIInputBuffer[0];
+            var player1Buffer = _playerUIInputsBuffer[0];
 
             if (player1Buffer.Choice1Clicked)
             {
@@ -45,6 +40,15 @@ public partial class MainMenuSystem : SystemBase
             {
                 ExitGame();
             }
+        }
+
+        private void ExitGame()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+         Application.Quit();
+#endif
         }
     }
 }
