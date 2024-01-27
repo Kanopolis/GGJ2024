@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4091824556443233864}
   - component: {fileID: 6617568800568597910}
   - component: {fileID: 3640639233966078126}
-  - component: {fileID: 5675942745487273593}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -84,28 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5675942745487273593
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2880571256884274156}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8768992560467290405
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +99,7 @@ GameObject:
   - component: {fileID: 4681854078685176946}
   - component: {fileID: 2665680667746237768}
   - component: {fileID: 3430548981700570730}
+  - component: {fileID: -164349326580691306}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -220,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ProjectilePrefab: {fileID: 7465289437616572982, guid: 2171800b0764e9a4b936ad7384014e83, type: 3}
-  m_ProjectileSpeed: 15
+  m_ProjectileSpeed: 25
   m_ProjectileLifetime: 5
   m_ProjectileCount: 8
   m_AttackDamage: 1
@@ -250,7 +228,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ProjectilePrefab: {fileID: 7465289437616572982, guid: 2171800b0764e9a4b936ad7384014e83, type: 3}
-  m_ProjectileSpeed: 20
+  m_ProjectileSpeed: 30
   m_ProjectileLifetime: 5
   m_AttackDamage: 1
-  m_AttackCooldown: 0.5
+  m_AttackCooldown: 0.25
+--- !u!54 &-164349326580691306
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768992560467290405}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 0
+  m_ImplicitTensor: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
