@@ -35,6 +35,7 @@ public partial struct AttackSystem_Enemy_Melee : ISystem
     [BurstCompile]
     public partial struct AttackSystem_Enemy_MeleeJob : IJobEntity
     {
+        public EntityCommandBuffer EntityBuffer;
         public NativeList<SPlayerData> PlayerData;
         public float DeltaTime;
 
@@ -57,9 +58,10 @@ public partial struct AttackSystem_Enemy_Melee : ISystem
                         PlayerData[i].CurrentData.ValueRW.CurrentHitPoints -= atk.Damage;
                         hasHit = true;
 
-                        if (PlayerData[i].CurrentData.ValueRO.CurrentHitPoints <= 0)
+                        if (PlayerData[i].CurrentData.ValueRW.CurrentHitPoints <= 0)
                         {
                             //Player Death!
+                            CombatManager.CallPlayerDeath();
                         }
                     }
 

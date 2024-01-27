@@ -64,11 +64,13 @@ public partial struct ProjectileCollissionSystem : ISystem
                 player.CurrentHitPoints -= projectile.Damage;
 
                 if (player.CurrentHitPoints <= 0)
-                    UnityEngine.Debug.Log("Player Dead");
+                {
+                    CombatManager.CallPlayerDeath();
+                }
 
                 ActorGroupLookup[playerEnt] = player;
 
-                EntityBuffer.DestroyEntity(_triggerEvent.EntityA);
+                EntityBuffer.DestroyEntity(projectileEnt);
             }
         }
     }
