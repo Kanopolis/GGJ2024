@@ -45,7 +45,9 @@ public partial struct MovementSystem : ISystem
                 movement.CurrentMoveSpeed = movement.MaxMovementSpeed;
             }
 
-            pVel.Linear = movement.MovementDirection * movement.CurrentMoveSpeed;
+            float3 inputVel = movement.MovementDirection * movement.CurrentMoveSpeed;
+            inputVel.y = pVel.Linear.y;
+            pVel.Linear = inputVel;
         }
     }
 }

@@ -29,7 +29,7 @@ public partial struct AttackSystem_Enemy_Melee : ISystem
             PlayerData = playerData,
             DeltaTime = SystemAPI.Time.DeltaTime
         };
-        attackJob.Schedule();
+        _state.Dependency = attackJob.Schedule(_state.Dependency);
     }
 
     [BurstCompile]

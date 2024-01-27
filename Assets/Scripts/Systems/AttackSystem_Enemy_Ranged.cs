@@ -32,6 +32,7 @@ public partial struct AttackSystem_Enemy_Ranged : ISystem
             PlayerData = playerData,
             DeltaTime = SystemAPI.Time.DeltaTime
         };
+        _state.Dependency.Complete();
         attackJob.Run();
         buffer.Playback(_state.EntityManager);
     }
