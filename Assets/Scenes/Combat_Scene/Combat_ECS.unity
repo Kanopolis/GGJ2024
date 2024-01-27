@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 1006892915}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 535509408433986780, guid: c36b8931fc20c5241914e8bb501afdd7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 535509408433986780, guid: c36b8931fc20c5241914e8bb501afdd7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -222,9 +222,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5508769001591672825, guid: c36b8931fc20c5241914e8bb501afdd7, type: 3}
-      propertyPath: m_Camera
-      value: 
+    - target: {fileID: 3430548981700570730, guid: c36b8931fc20c5241914e8bb501afdd7, type: 3}
+      propertyPath: m_AttackCooldown
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430548981700570730, guid: c36b8931fc20c5241914e8bb501afdd7, type: 3}
+      propertyPath: m_ProjectileSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681854078685176946, guid: c36b8931fc20c5241914e8bb501afdd7, type: 3}
+      propertyPath: m_ProjectileSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8768992560467290405, guid: c36b8931fc20c5241914e8bb501afdd7, type: 3}
       propertyPath: m_Name

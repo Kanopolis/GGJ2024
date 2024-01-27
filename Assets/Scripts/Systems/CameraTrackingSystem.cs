@@ -4,11 +4,14 @@ using Unity.Transforms;
 
 public partial struct CameraTrackingSystem : ISystem
 {
+    public void OnCreate(ref SystemState _state)
+    {
+    }
 
     [BurstCompile]
     public void OnUpdate(ref SystemState _state)
     {
-        foreach (RefRO<LocalTransform> lTrans in SystemAPI.Query<RefRO<LocalTransform>>())
+        foreach ((RefRO<Player> player, RefRO<LocalTransform> lTrans) in SystemAPI.Query<RefRO<Player>, RefRO<LocalTransform>>().WithNone<Projectile, Enemy>())
         {
             CameraTracker.mainCameraTracker.TrackPosition(lTrans.ValueRO.Position);
         }
@@ -19,7 +22,7 @@ public partial struct CameraTrackingSystem : ISystem
     {
         public void Execute()
         {
-            
+
         }
     }
 }
