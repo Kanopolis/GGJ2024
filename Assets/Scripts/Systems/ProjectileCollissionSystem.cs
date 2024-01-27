@@ -4,6 +4,7 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
 using Unity.Physics.Systems;
+using static EnemySpawnerAuthoring;
 
 [UpdateInGroup(typeof(PhysicsSystemGroup))]
 [UpdateAfter(typeof(PhysicsSimulationGroup))]
@@ -90,18 +91,10 @@ public partial struct ProjectileCollissionSystem : ISystem
             if (isValid)
             {
                 Projectile projectile = ProjectileGroupLookup[projectileEnt];
-                Actor player = ActorGroupLookup[hitEnt];
-                player.CurrentHitPoints -= projectile.Damage;
+                Actor hitActor = ActorGroupLookup[hitEnt];
+                hitActor.CurrentHitPoints -= projectile.Damage;
 
-                if (player.CurrentHitPoints <= 0)
-                {
-                    if (hitPlayer)
-                        CombatManager.CallPlayerDeath();
-                    else
-                        EntityBuffer.DestroyEntity(hitEnt);
-                }
-
-                ActorGroupLookup[hitEnt] = player;
+                ActorGroupLookup[hitEnt] = hitActor;
 
                 EntityBuffer.DestroyEntity(projectileEnt);
             }

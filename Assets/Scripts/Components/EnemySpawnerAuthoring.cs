@@ -17,21 +17,25 @@ public class EnemySpawnerAuthoring : MonoBehaviour
         public override void Bake(EnemySpawnerAuthoring _authoring)
         {
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
-            AddComponent(entity, new EnemySpawner()
-            {
-                TimeBetweenWaves = _authoring.m_TimeBetweenWaves,
-                TimeBetweenSpawns = _authoring.m_TimeBetweenSpawns
-            });
 
             DynamicBuffer<EnemySpawnerBufferElement> spawnDataBuffer = AddBuffer<EnemySpawnerBufferElement>(entity);
+            int allEnemiesCount = 0;
             for (int i = 0; i < _authoring.m_Waves.Length; i++)
             {
+                allEnemiesCount += _authoring.m_Waves[i].SpawnCount;
                 spawnDataBuffer.Add(new EnemySpawnerBufferElement()
                 {
-                    EnemyPrefab= GetEntity(_authoring.m_Waves[i].EnemyType, TransformUsageFlags.Dynamic),
+                    EnemyPrefab = GetEntity(_authoring.m_Waves[i].EnemyType, TransformUsageFlags.Dynamic),
                     SpawnCount = _authoring.m_Waves[i].SpawnCount
                 });
             }
+
+            AddComponent(entity, new EnemySpawner()
+            {
+                TimeBetweenWaves = _authoring.m_TimeBetweenWaves,
+                TimeBetweenSpawns = _authoring.m_TimeBetweenSpawns,
+                AllEnemiesCount = allEnemiesCount
+            });
         }
     }
 
@@ -41,6 +45,8 @@ public class EnemySpawnerAuthoring : MonoBehaviour
         public float TimeBetweenSpawns;
         public float Timer;
         public float SpawnCounter;
+        public int AllEnemiesCount;
+        public int CurrentSlaynEnemiesCount;
     }
 
     [System.Serializable]

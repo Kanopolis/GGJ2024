@@ -61,6 +61,7 @@ public partial struct WaveSpawnSystem : ISystem
                         //Next Wave
                         spawnBuffer.RemoveAt(0);
                         spawner.Timer += spawner.TimeBetweenWaves;
+                        spawner.SpawnCounter = 0;
                     }
                     else
                     {

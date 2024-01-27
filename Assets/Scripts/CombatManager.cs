@@ -19,6 +19,11 @@ public class CombatManager : MonoBehaviour
         Debug.Log("Player is dead! Combat is over...");
     }
 
+    public static void CallAllEnemiesDeath()
+    {
+        Debug.Log("All Enemies are gone! Combat is over...");
+    }
+
     public static void CallSpawnEnd()
     {
         Debug.Log("Spawning is done!");

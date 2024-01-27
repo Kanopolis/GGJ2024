@@ -1,6 +1,7 @@
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Entities.UniversalDelegates;
 using Unity.Mathematics;
 using Unity.Transforms;
 
@@ -29,7 +30,8 @@ public partial struct AttackSystem_Enemy_Melee : ISystem
             PlayerData = playerData,
             DeltaTime = SystemAPI.Time.DeltaTime
         };
-        _state.Dependency = attackJob.Schedule(_state.Dependency);
+        _state.Dependency.Complete();
+        attackJob.Run();
     }
 
     [BurstCompile]
@@ -57,12 +59,6 @@ public partial struct AttackSystem_Enemy_Melee : ISystem
                         //Hurt Player!
                         PlayerData[i].CurrentData.ValueRW.CurrentHitPoints -= atk.Damage;
                         hasHit = true;
-
-                        if (PlayerData[i].CurrentData.ValueRW.CurrentHitPoints <= 0)
-                        {
-                            //Player Death!
-                            CombatManager.CallPlayerDeath();
-                        }
                     }
 
                     if (hasHit)
