@@ -35,7 +35,7 @@ public partial class InputSystem_Player : SystemBase
             MoveInput = movementInput,
             ShootInput = shootInput
         };
-        inputJob.Schedule();
+        Dependency = inputJob.Schedule(Dependency);
     }
 
     [BurstCompile]

@@ -46,7 +46,7 @@ public partial struct WaveSpawnSystem : ISystem
                 {
                     Entity newEnemy = EntityBuffer.Instantiate(spawnBuffer[0].EnemyPrefab);
                     float3 enemyPosition = Rnd.NextFloat3(-20, 20);
-                    enemyPosition.y = 0;
+                    enemyPosition.y = 3;
 
                     EntityBuffer.SetComponent<LocalTransform>(newEnemy, new LocalTransform()
                     {

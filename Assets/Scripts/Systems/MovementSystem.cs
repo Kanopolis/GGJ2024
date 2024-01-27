@@ -1,9 +1,12 @@
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Physics;
+using Unity.Physics.Extensions;
+using Unity.Physics.Systems;
 using Unity.Transforms;
-using Unity.VisualScripting;
 
+[UpdateAfter(typeof(PhysicsSimulationGroup))]
 public partial struct MovementSystem : ISystem
 {
     public void OnCreate(ref SystemState _state)
@@ -26,7 +29,7 @@ public partial struct MovementSystem : ISystem
     {
         public float DeltaTime;
 
-        public void Execute(ref Movement movement, ref LocalTransform lTrans)
+        public void Execute(ref Movement movement, ref PhysicsVelocity pVel)
         {
             if (movement.Accelleration > 0)
             {
@@ -42,7 +45,7 @@ public partial struct MovementSystem : ISystem
                 movement.CurrentMoveSpeed = movement.MaxMovementSpeed;
             }
 
-            lTrans.Position += movement.MovementDirection * movement.CurrentMoveSpeed * DeltaTime;
+            pVel.Linear = movement.MovementDirection * movement.CurrentMoveSpeed;
         }
     }
 }
