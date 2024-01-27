@@ -5,7 +5,9 @@ using UnityEngine;
 public class MovementAuthoring : MonoBehaviour
 {
     [SerializeField]
-    private float m_MoveSpeed;
+    private float m_MaxMoveSpeed;
+    [SerializeField]
+    private float m_Accelleration;
 
     public class Baker : Baker<MovementAuthoring>
     {
@@ -14,7 +16,8 @@ public class MovementAuthoring : MonoBehaviour
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
             AddComponent(entity, new Movement()
             {
-                MovementSpeed = _authoring.m_MoveSpeed
+                MaxMovementSpeed = _authoring.m_MaxMoveSpeed,
+                Accelleration = _authoring.m_Accelleration
             });
         }
     }
@@ -23,5 +26,7 @@ public class MovementAuthoring : MonoBehaviour
 public struct Movement : IComponentData
 {
     public float3 MovementDirection;
-    public float MovementSpeed;
+    public float MaxMovementSpeed;
+    public float CurrentMoveSpeed;
+    public float Accelleration;
 }
