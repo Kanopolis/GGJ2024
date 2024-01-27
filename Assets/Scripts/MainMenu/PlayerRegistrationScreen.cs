@@ -14,9 +14,10 @@ public class PlayerRegistrationScreen : MonoBehaviour
         m_PlayerSprite.gameObject.SetActive(false);
     }
 
-    public void PlayerJoined()
+    public void PlayerJoined(Color color)
     {
         m_ReadyTextObject.SetActive(true);
+        m_PlayerSprite.color = color;
         m_PlayerSprite.gameObject.SetActive(true);
     }
 }

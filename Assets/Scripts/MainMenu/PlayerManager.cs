@@ -31,7 +31,8 @@ public class PlayerManager : MonoBehaviour
 
     public void OnPlayerJoined()
     {
-        m_RegistrationScreens[m_PlayerNumber++].PlayerJoined();
+        m_RegistrationScreens[m_PlayerNumber].PlayerJoined(GameManager.PlayerColors[m_PlayerNumber]);
+        ++m_PlayerNumber;
     }
 
     public void OnPlayerLeft()
