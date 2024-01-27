@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CardTypes_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: abd2db64b220c0b45bcebd715757df34, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 18095902720
+    m_Localized: Gegner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53453885440
+    m_Localized: Musik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94402875392
+    m_Localized: Ort
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137893613568
+    m_Localized: Effekt
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

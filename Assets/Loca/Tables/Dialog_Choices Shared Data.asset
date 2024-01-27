@@ -15,20 +15,68 @@ MonoBehaviour:
   m_TableCollectionName: Dialog_Choices
   m_TableCollectionNameGuidString: 4f232b1183db93c43b3f0521ba414e64
   m_Entries:
-  - m_Id: 8657271623680
-    m_Key: Choice1_Thief
+  - m_Id: 106718635331584
+    m_Key: Enemy_One
     m_Metadata:
       m_Items: []
-  - m_Id: 8657288400896
-    m_Key: Choice2_Mountains
+  - m_Id: 106718673080320
+    m_Key: Enemy_Two
     m_Metadata:
       m_Items: []
-  - m_Id: 8657288400897
-    m_Key: Choice3_Bunnys
+  - m_Id: 106718673080321
+    m_Key: Enemy_Three
     m_Metadata:
       m_Items: []
-  - m_Id: 8657288400898
-    m_Key: Choice4_Cacte
+  - m_Id: 106718673080322
+    m_Key: Enemy_Four
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080323
+    m_Key: Location_One
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080324
+    m_Key: Location_Two
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080325
+    m_Key: Location_Three
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080326
+    m_Key: Location_Four
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080327
+    m_Key: Shader_One
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080328
+    m_Key: Shader_Two
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080329
+    m_Key: Shader_Three
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080330
+    m_Key: Shader_Four
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080331
+    m_Key: Music_One
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080332
+    m_Key: Music_Two
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080333
+    m_Key: Music_Three
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080334
+    m_Key: Music_Four
     m_Metadata:
       m_Items: []
   m_Metadata:

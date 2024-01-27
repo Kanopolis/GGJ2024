@@ -10,35 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Dialogs Shared Data
+  m_Name: CardTypes Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Dialogs
-  m_TableCollectionNameGuidString: 349076a38c6c8f94e9f6bd1c76f7ec2c
+  m_TableCollectionName: CardTypes
+  m_TableCollectionNameGuidString: abd2db64b220c0b45bcebd715757df34
   m_Entries:
-  - m_Id: 8700082884608
-    m_Key: Dialog_01
+  - m_Id: 18095902720
+    m_Key: Enemy
     m_Metadata:
       m_Items: []
-  - m_Id: 106793696595968
-    m_Key: Dialog_02
+  - m_Id: 53453885440
+    m_Key: Music
     m_Metadata:
       m_Items: []
-  - m_Id: 106793709178880
-    m_Key: Dialog_03
+  - m_Id: 94402875392
+    m_Key: Location
     m_Metadata:
       m_Items: []
-  - m_Id: 106793709178881
-    m_Key: Dialog_04
+  - m_Id: 137893613568
+    m_Key: Shader
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 7283273381201051672
+    rid: 7283273389063274498
   references:
     version: 2
     RefIds:
-    - rid: 7283273381201051672
+    - rid: 7283273389063274498
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1706295133381
+        m_CustomEpoch: 1706326402299
