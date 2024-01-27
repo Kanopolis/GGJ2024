@@ -24,7 +24,7 @@ public partial struct InputSystem_Enemy : ISystem
         {
             PlayerPositions = playerPositions
         };
-        enemyMoveDataJob.Schedule();
+        _state.Dependency = enemyMoveDataJob.Schedule(_state.Dependency);
     }
 
     [BurstCompile]
