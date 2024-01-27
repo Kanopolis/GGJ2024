@@ -27,6 +27,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abd2db64b220c0b45bcebd715757df34
+    m_Address: Assets/Loca/Tables/CardTypes Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: f56ff360854298b4bae58d4eb0e39052, type: 2}
   m_SchemaSet:
