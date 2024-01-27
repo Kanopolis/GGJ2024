@@ -35,6 +35,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Shooting"",
+                    ""type"": ""Value"",
+                    ""id"": ""f62c55b0-de14-4bd4-8dd9-8b041462cea3"",
+                    ""expectedControlType"": ""Stick"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -92,6 +101,61 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""ArrowKeys"",
+                    ""id"": ""9a486c27-9664-466e-b089-9fd72c13ae59"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shooting"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f45255d8-f8b9-494d-bf51-79af59839fdc"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shooting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f650b7ac-3511-4e0e-bcd6-3ba69778580e"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shooting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""b44f6830-f8b6-43e0-a39f-c9abad269dd7"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shooting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""59c5d053-bff7-43f5-bb79-8ac1b305d66a"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shooting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -101,6 +165,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         // Combat
         m_Combat = asset.FindActionMap("Combat", throwIfNotFound: true);
         m_Combat_Movement = m_Combat.FindAction("Movement", throwIfNotFound: true);
+        m_Combat_Shooting = m_Combat.FindAction("Shooting", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -163,11 +228,13 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Combat;
     private List<ICombatActions> m_CombatActionsCallbackInterfaces = new List<ICombatActions>();
     private readonly InputAction m_Combat_Movement;
+    private readonly InputAction m_Combat_Shooting;
     public struct CombatActions
     {
         private @PlayerInputs m_Wrapper;
         public CombatActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Combat_Movement;
+        public InputAction @Shooting => m_Wrapper.m_Combat_Shooting;
         public InputActionMap Get() { return m_Wrapper.m_Combat; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -180,6 +247,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @Shooting.started += instance.OnShooting;
+            @Shooting.performed += instance.OnShooting;
+            @Shooting.canceled += instance.OnShooting;
         }
 
         private void UnregisterCallbacks(ICombatActions instance)
@@ -187,6 +257,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @Shooting.started -= instance.OnShooting;
+            @Shooting.performed -= instance.OnShooting;
+            @Shooting.canceled -= instance.OnShooting;
         }
 
         public void RemoveCallbacks(ICombatActions instance)
@@ -207,5 +280,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     public interface ICombatActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnShooting(InputAction.CallbackContext context);
     }
 }

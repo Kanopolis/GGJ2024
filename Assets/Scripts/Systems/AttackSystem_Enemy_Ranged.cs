@@ -4,8 +4,6 @@ using Unity.Entities;
 using static AttackSystem_Enemy_Melee;
 using Unity.Transforms;
 using Unity.Mathematics;
-using System;
-using System.Numerics;
 
 public partial struct AttackSystem_Enemy_Ranged : ISystem
 {

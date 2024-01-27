@@ -1,9 +1,7 @@
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public partial class InputSystem_Player : SystemBase
 {
@@ -29,12 +27,13 @@ public partial class InputSystem_Player : SystemBase
     [BurstCompile]
     protected override void OnUpdate()
     {
-        Vector2 horizontalInput = playerInputs.Combat.Movement.ReadValue<Vector2>();
+        Vector2 movementInput = playerInputs.Combat.Movement.ReadValue<Vector2>();
+        Vector2 shootInput = playerInputs.Combat.Shooting.ReadValue<Vector2>();
 
         InputSystem_PlayerJob inputJob = new InputSystem_PlayerJob()
         {
-            HIn = horizontalInput.x,
-            VIn = horizontalInput.y
+            MoveInput = movementInput,
+            ShootInput = shootInput
         };
         inputJob.Schedule();
     }
@@ -43,12 +42,15 @@ public partial class InputSystem_Player : SystemBase
     [WithAll(typeof(Player))]
     public partial struct InputSystem_PlayerJob : IJobEntity
     {
-        public float HIn;
-        public float VIn;
+        public float2 MoveInput;
+        public float2 ShootInput;
 
-        public void Execute(ref Movement movement)
+        public void Execute(ref Movement movement, ref PlayerInput input)
         {
-            movement.MovementDirection = new float3(HIn, 0, VIn);
+            input.MovementInput = MoveInput;
+            input.ShootInput = ShootInput;
+
+            movement.MovementDirection = new float3(MoveInput.x, 0, MoveInput.y);
         }
     }
 }
