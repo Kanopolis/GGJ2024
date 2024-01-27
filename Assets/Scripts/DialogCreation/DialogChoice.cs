@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Localization;
 
 public class DialogChoice : MonoBehaviour
 {

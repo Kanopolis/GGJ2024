@@ -32,6 +32,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 227c3c1dd91039d4da31f8a6f5eeaa51
+    m_Address: Assets/Loca/Tables/MenuLoca Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: f56ff360854298b4bae58d4eb0e39052, type: 2}
   m_SchemaSet:

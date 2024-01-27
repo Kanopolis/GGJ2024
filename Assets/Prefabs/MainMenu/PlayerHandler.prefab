@@ -88,7 +88,7 @@ MonoBehaviour:
     m_ActionName: MainMenu/Choice4[/XInputControllerWindows/buttonWest,/Keyboard/a]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Combat
+  m_DefaultActionMap: 956af322-886a-4293-a405-4bb558dc0c77
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &7069143745020455885

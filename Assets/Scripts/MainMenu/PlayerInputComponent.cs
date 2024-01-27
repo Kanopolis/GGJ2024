@@ -64,7 +64,6 @@ public class PlayerInputComponent : MonoBehaviour
 
         if (_context.action.name.StartsWith("Choice"))
         {
-
             EntityCommandBuffer ecb = new(Allocator.Temp);
             var bufferEntity = World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntityQuery(ComponentType.ReadWrite<PlayerUIInputBuffer>()).GetSingletonEntity();
             var playerUIInputBuffer = World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntityQuery(ComponentType.ReadWrite<PlayerUIInputBuffer>()).GetSingletonBuffer<PlayerUIInputBuffer>();
@@ -75,6 +74,7 @@ public class PlayerInputComponent : MonoBehaviour
                 case "Choice1":
                     bufferToWrite = new PlayerUIInputBuffer()
                     {
+                        ConfirmClicked = playerUIInputBuffer[_playerIndex].ConfirmClicked,
                         Choice1Clicked = true,
                         Choice2Clicked = false,
                         Choice3Clicked = false,
@@ -84,6 +84,7 @@ public class PlayerInputComponent : MonoBehaviour
                 case "Choice2":
                     bufferToWrite = new PlayerUIInputBuffer()
                     {
+                        ConfirmClicked = playerUIInputBuffer[_playerIndex].ConfirmClicked,
                         Choice1Clicked = false,
                         Choice2Clicked = true,
                         Choice3Clicked = false,
@@ -93,6 +94,7 @@ public class PlayerInputComponent : MonoBehaviour
                 case "Choice3":
                     bufferToWrite = new PlayerUIInputBuffer()
                     {
+                        ConfirmClicked = playerUIInputBuffer[_playerIndex].ConfirmClicked,
                         Choice1Clicked = false,
                         Choice2Clicked = false,
                         Choice3Clicked = true,
@@ -102,6 +104,7 @@ public class PlayerInputComponent : MonoBehaviour
                 case "Choice4":
                     bufferToWrite = new PlayerUIInputBuffer()
                     {
+                        ConfirmClicked = playerUIInputBuffer[_playerIndex].ConfirmClicked,
                         Choice1Clicked = false,
                         Choice2Clicked = false,
                         Choice3Clicked = false,
@@ -111,6 +114,7 @@ public class PlayerInputComponent : MonoBehaviour
                 default:
                     bufferToWrite = new PlayerUIInputBuffer()
                     {
+                        ConfirmClicked = playerUIInputBuffer[_playerIndex].ConfirmClicked,
                         Choice1Clicked = false,
                         Choice2Clicked = false,
                         Choice3Clicked = false,
@@ -133,6 +137,41 @@ public class PlayerInputComponent : MonoBehaviour
                 }
             }
             ecb.Playback(World.DefaultGameObjectInjectionWorld.EntityManager);
+        }
+        else if (_context.action.name.StartsWith("RegisterPlayer"))
+        {
+            var bufferEntity = World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntityQuery(ComponentType.ReadWrite<PlayerUIInputBuffer>()).GetSingletonEntity();
+            var playerUIInputBuffer = World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntityQuery(ComponentType.ReadWrite<PlayerUIInputBuffer>()).GetSingletonBuffer<PlayerUIInputBuffer>();
+
+            var currentPlayerBuffer = playerUIInputBuffer[_playerIndex];
+            if (currentPlayerBuffer.Choice1Clicked == true || currentPlayerBuffer.Choice2Clicked == true || currentPlayerBuffer.Choice3Clicked == true || currentPlayerBuffer.Choice4Clicked == true)
+            {
+                EntityCommandBuffer ecb = new(Allocator.Temp);
+                ecb.RemoveComponent<PlayerUIInputBuffer>(bufferEntity);
+                PlayerUIInputBuffer bufferToWrite = new()
+                {
+                    ConfirmClicked = true,
+                    Choice1Clicked = currentPlayerBuffer.Choice1Clicked,
+                    Choice2Clicked = currentPlayerBuffer.Choice2Clicked,
+                    Choice3Clicked = currentPlayerBuffer.Choice3Clicked,
+                    Choice4Clicked = currentPlayerBuffer.Choice4Clicked
+                };
+
+                DynamicBuffer<PlayerUIInputBuffer> newBuffer = ecb.AddBuffer<PlayerUIInputBuffer>(bufferEntity);
+                newBuffer.Length = 4;
+                for (int i = 0; i < playerUIInputBuffer.Length; i++)
+                {
+                    if (i == _playerIndex)
+                    {
+                        newBuffer[i] = bufferToWrite;
+                    }
+                    else
+                    {
+                        newBuffer[i] = playerUIInputBuffer[i];
+                    }
+                }
+                ecb.Playback(World.DefaultGameObjectInjectionWorld.EntityManager);
+            }
         }
     }
 
@@ -163,6 +202,7 @@ public struct PlayerCombatInputBuffer : IBufferElementData
 [InternalBufferCapacity(4)]
 public struct PlayerUIInputBuffer : IBufferElementData
 {
+    public bool ConfirmClicked;
     public bool Choice1Clicked;
     public bool Choice2Clicked;
     public bool Choice3Clicked;

@@ -24,6 +24,10 @@ MonoBehaviour:
       sich dem Kampf stellen unter der {shader} Sonne und zur der Musik von {music}."
     m_Metadata:
       m_Items: []
+  - m_Id: 339201654099968
+    m_Localized: Test
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

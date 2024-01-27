@@ -1,10 +1,13 @@
 using Unity.Entities;
+#if UNITY_EDITOR
 using UnityEditor.Localization;
+#endif
 using UnityEngine;
 using UnityEngine.Localization.Tables;
 
 public class DialogDatabase : MonoBehaviour
 {
+#if UNITY_EDITOR
     [SerializeField]
     private StringTableCollection m_DialogTable;
 
@@ -70,6 +73,7 @@ public class DialogDatabase : MonoBehaviour
             AddComponent<DialogReturnValue_Data>(entity);
         }
     }
+#endif
 }
 
 public struct DialogReturnValue_Data : IComponentData

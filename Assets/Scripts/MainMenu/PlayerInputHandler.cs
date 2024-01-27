@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInputHandler : MonoBehaviour
@@ -10,6 +8,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
         PlayerInputComponent.RegisterPlayer(m_PlayerIndex, m_PlayerInput);
     }
 }

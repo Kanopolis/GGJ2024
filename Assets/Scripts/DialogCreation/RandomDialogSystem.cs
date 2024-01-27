@@ -1,6 +1,7 @@
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Mathematics;
 
 [BurstCompile]
 public partial struct RandomDialogSystem : ISystem
@@ -11,9 +12,11 @@ public partial struct RandomDialogSystem : ISystem
         _state.Enabled = false;
         EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.TempJob);
 
+        var random = Unity.Mathematics.Random.CreateFromIndex((uint)UnityEngine.Random.Range(0,1000));
+
         RandomDialogSystemJob job = new()
         {
-            DeltaTime = SystemAPI.Time.DeltaTime,
+            MyRandom = random,
             ecbParallel = ecb.AsParallelWriter(),
         };
         job.Schedule();
@@ -27,7 +30,7 @@ public partial struct RandomDialogSystem : ISystem
     [BurstCompile]
     public partial struct RandomDialogSystemJob : IJobEntity
     {
-        public float DeltaTime;
+        public Random MyRandom;
         internal EntityCommandBuffer.ParallelWriter ecbParallel;
 
         public readonly void Execute(
@@ -44,15 +47,14 @@ public partial struct RandomDialogSystem : ISystem
             ref DynamicBuffer<DialogChoicesMusicReturnBuffer> _dialogChoices4ReturnBuffer,
             ref DialogReturnValue_Data _dialogReturnValue_Data)
         {
-            var random = Unity.Mathematics.Random.CreateFromIndex((uint)DeltaTime);
-            _dialogReturnValue_Data.DialogEntryKey = _dialogBuffer[random.NextInt(_dialogBuffer.Length - 1)].Value;
+            _dialogReturnValue_Data.DialogEntryKey = _dialogBuffer[MyRandom.NextInt(_dialogBuffer.Length)].Value;
 
             for (int i = 0; i < 4; i++)
             {
-                var NextChoice1Id = random.NextInt(_dialogChoices1Buffer.Length - 1);
-                var NextChoice2Id = random.NextInt(_dialogChoices2Buffer.Length - 1);
-                var NextChoice3Id = random.NextInt(_dialogChoices3Buffer.Length - 1);
-                var NextChoice4Id = random.NextInt(_dialogChoices4Buffer.Length - 1);
+                var NextChoice1Id = MyRandom.NextInt(_dialogChoices1Buffer.Length - 1);
+                var NextChoice2Id = MyRandom.NextInt(_dialogChoices2Buffer.Length - 1);
+                var NextChoice3Id = MyRandom.NextInt(_dialogChoices3Buffer.Length - 1);
+                var NextChoice4Id = MyRandom.NextInt(_dialogChoices4Buffer.Length - 1);
 
                 _dialogChoices1ReturnBuffer[i] = new() { Value = _dialogChoices1Buffer[NextChoice1Id].Value };
                 _dialogChoices2ReturnBuffer[i] = new() { Value = _dialogChoices2Buffer[NextChoice2Id].Value };

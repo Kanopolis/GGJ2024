@@ -22,8 +22,6 @@ public class DialogCanvasHandler : MonoBehaviour
     [SerializeField]
     private LocalizeStringEvent m_FinalDialogLoca;
 
-    private System.Random rng = new();
-
     private void Awake()
     {
         DialogCanvasHandler instance = this;
@@ -105,7 +103,7 @@ public class DialogCanvasHandler : MonoBehaviour
         while (n > 1)
         {
             n--;
-            int k = rng.Next(n + 1);
+            int k = Random.Range(0, n + 1);
             DialogChoice choice = m_DialogChoices[k];
             m_DialogChoices[k] = m_DialogChoices[n];
             m_DialogChoices[n] = choice;
