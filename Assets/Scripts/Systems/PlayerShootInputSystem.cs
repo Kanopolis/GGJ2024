@@ -3,6 +3,8 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
+[UpdateAfter(typeof(InputSystem_Player))]
+[UpdateAfter(typeof(MovementSystem))]
 public partial struct PlayerShootInputSystem : ISystem
 {
     public void OnCreate(ref SystemState _state)
@@ -19,6 +21,7 @@ public partial struct PlayerShootInputSystem : ISystem
             EntityBuffer = buffer,
             DeltaTime = SystemAPI.Time.DeltaTime
         };
+        _state.Dependency.Complete();
         attackJob.Run();
         buffer.Playback(_state.EntityManager);
     }
