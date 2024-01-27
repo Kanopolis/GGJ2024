@@ -10,28 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: CardTypes_en
+  m_Name: MenuLoca_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: abd2db64b220c0b45bcebd715757df34, type: 2}
+  m_SharedData: {fileID: 11400000, guid: 227c3c1dd91039d4da31f8a6f5eeaa51, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 18095902720
-    m_Localized: Enemy
+  - m_Id: 2580840812544
+    m_Localized: Start Game
     m_Metadata:
       m_Items: []
-  - m_Id: 53453885440
-    m_Localized: Music
+  - m_Id: 2580861784064
+    m_Localized: 'Press
+
+      [Controller Start
+
+      Keyboard Enter]'
     m_Metadata:
       m_Items: []
-  - m_Id: 94402875392
-    m_Localized: Location
+  - m_Id: 2580861784065
+    m_Localized: Ready
     m_Metadata:
       m_Items: []
-  - m_Id: 137893613568
-    m_Localized: Modifier
+  - m_Id: 2580861784066
+    m_Localized: Exit Game
     m_Metadata:
       m_Items: []
   references:

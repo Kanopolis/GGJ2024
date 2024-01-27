@@ -18,22 +18,16 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 8700082884608
-    m_Localized: A little group of {enemy} arived at {choice2}, here they have to
-      fight against some evil {choice3} what was kind of trikey since they where
-      in the middle of {choice4}!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106793696595968
-    m_Localized: As the heroes crossed the {location} a wild horde of {enemies} appeared,
-      intent on taking their life. Now, they must battle under a {shader}-sun to
-      the sound of {music}.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106793709178880
+  - m_Id: 339201654099968
     m_Localized: 'As they find themselves surrounded by {enemies} in {location} our
       heroes must ask themselves: Who left the stove on? Neither the {shader} light
       nor the {music} can tell them.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339201641517056
+    m_Localized: As the heroes crossed the {location} a wild horde of {enemies} appeared,
+      intent on taking their life. Now, they must battle under a {shader}-sun to
+      the sound of {music}.
     m_Metadata:
       m_Items: []
   references:

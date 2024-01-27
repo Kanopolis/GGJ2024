@@ -18,10 +18,10 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 8700082884608
-    m_Localized: "Eine kleine Gruppe von {choice1} erreichten {choice2}, hier mussten
-      sie gegen ein paar {choice3} ank\xE4mpfen. Dies erwies sich al schwierig, da
-      sie sich inmitten von {choice4} befanden!"
+  - m_Id: 339201641517056
+    m_Localized: "W\xE4rend die Helden den {location} \xFCberquerten, tauchte eine
+      wilde Horder {enemies} auf, mit dem Ziel ihr leben zu nehmen. Sie m\xFCssen
+      sich dem Kampf stellen unter der {shader} Sonne und zur der Musik von {music}."
     m_Metadata:
       m_Items: []
   references:

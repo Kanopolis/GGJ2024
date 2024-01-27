@@ -15,6 +15,70 @@ MonoBehaviour:
   m_TableCollectionName: Dialog_Choices
   m_TableCollectionNameGuidString: 4f232b1183db93c43b3f0521ba414e64
   m_Entries:
+  - m_Id: 339141017047040
+    m_Key: Enemy_Plants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212864
+    m_Key: Enemy_Fantasy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212865
+    m_Key: Enemy_Fairytale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212866
+    m_Key: Enemy_Space
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212867
+    m_Key: Location_SpaceMushroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080324
+    m_Key: Location_Two
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080325
+    m_Key: Location_Three
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080326
+    m_Key: Location_Four
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212868
+    m_Key: Shader_Normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212869
+    m_Key: Shader_BlackAndWhite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212870
+    m_Key: Modifier_Blizzard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212871
+    m_Key: Shader_Psychedelic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080331
+    m_Key: Music_One
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080332
+    m_Key: Music_Two
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080333
+    m_Key: Music_Three
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080334
+    m_Key: Music_Four
+    m_Metadata:
+      m_Items: []
   - m_Id: 106718635331584
     m_Key: Enemy_One
     m_Metadata:
@@ -35,18 +99,6 @@ MonoBehaviour:
     m_Key: Location_One
     m_Metadata:
       m_Items: []
-  - m_Id: 106718673080324
-    m_Key: Location_Two
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080325
-    m_Key: Location_Three
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080326
-    m_Key: Location_Four
-    m_Metadata:
-      m_Items: []
   - m_Id: 106718673080327
     m_Key: Shader_One
     m_Metadata:
@@ -61,22 +113,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 106718673080330
     m_Key: Shader_Four
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080331
-    m_Key: Music_One
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080332
-    m_Key: Music_Two
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080333
-    m_Key: Music_Three
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080334
-    m_Key: Music_Four
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -158,6 +158,169 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""MainMenu"",
+            ""id"": ""956af322-886a-4293-a405-4bb558dc0c77"",
+            ""actions"": [
+                {
+                    ""name"": ""RegisterPlayer"",
+                    ""type"": ""Button"",
+                    ""id"": ""83bd77f1-10bd-4660-9884-251cc4a4d680"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Choice1"",
+                    ""type"": ""Button"",
+                    ""id"": ""cca5b7f8-8ea5-4ec4-aa49-4e3f35aecacd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Choice2"",
+                    ""type"": ""Button"",
+                    ""id"": ""531d3aee-b1e1-4f55-a25a-458dd79238cf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Choice3"",
+                    ""type"": ""Button"",
+                    ""id"": ""3c48fa0a-9ebd-4f08-9951-f78c45d5f26b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Choice4"",
+                    ""type"": ""Button"",
+                    ""id"": ""4f3d721e-703c-4a14-aa18-068ac6163ff3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""142039ba-60af-4250-b596-24b0123fa1e1"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RegisterPlayer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7a59846-5099-4a21-9a5f-c75d9dbd3956"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RegisterPlayer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b689285b-6056-4391-9e29-06a3bf1310b7"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Choice1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""368d5074-0941-4b35-bcd8-4a613f234dcc"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Choice1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3340f70-e223-4b6b-98cd-e7a1ccff43f0"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Choice2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc83f72f-351f-4871-8082-5e4fe9d94dd8"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Choice2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""108ecc95-bac7-42c2-ab33-c073594b13fa"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Choice3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d0bc10f3-7262-46ed-a7db-5d43dfad1559"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Choice3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""344f4004-732b-4e55-b542-22d3ac78f234"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Choice4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7be3a3c2-4e03-437b-9c15-f69489cec7c6"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Choice4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -166,6 +329,13 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Combat = asset.FindActionMap("Combat", throwIfNotFound: true);
         m_Combat_Movement = m_Combat.FindAction("Movement", throwIfNotFound: true);
         m_Combat_Shooting = m_Combat.FindAction("Shooting", throwIfNotFound: true);
+        // MainMenu
+        m_MainMenu = asset.FindActionMap("MainMenu", throwIfNotFound: true);
+        m_MainMenu_RegisterPlayer = m_MainMenu.FindAction("RegisterPlayer", throwIfNotFound: true);
+        m_MainMenu_Choice1 = m_MainMenu.FindAction("Choice1", throwIfNotFound: true);
+        m_MainMenu_Choice2 = m_MainMenu.FindAction("Choice2", throwIfNotFound: true);
+        m_MainMenu_Choice3 = m_MainMenu.FindAction("Choice3", throwIfNotFound: true);
+        m_MainMenu_Choice4 = m_MainMenu.FindAction("Choice4", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -277,9 +447,95 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         }
     }
     public CombatActions @Combat => new CombatActions(this);
+
+    // MainMenu
+    private readonly InputActionMap m_MainMenu;
+    private List<IMainMenuActions> m_MainMenuActionsCallbackInterfaces = new List<IMainMenuActions>();
+    private readonly InputAction m_MainMenu_RegisterPlayer;
+    private readonly InputAction m_MainMenu_Choice1;
+    private readonly InputAction m_MainMenu_Choice2;
+    private readonly InputAction m_MainMenu_Choice3;
+    private readonly InputAction m_MainMenu_Choice4;
+    public struct MainMenuActions
+    {
+        private @PlayerInputs m_Wrapper;
+        public MainMenuActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @RegisterPlayer => m_Wrapper.m_MainMenu_RegisterPlayer;
+        public InputAction @Choice1 => m_Wrapper.m_MainMenu_Choice1;
+        public InputAction @Choice2 => m_Wrapper.m_MainMenu_Choice2;
+        public InputAction @Choice3 => m_Wrapper.m_MainMenu_Choice3;
+        public InputAction @Choice4 => m_Wrapper.m_MainMenu_Choice4;
+        public InputActionMap Get() { return m_Wrapper.m_MainMenu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MainMenuActions set) { return set.Get(); }
+        public void AddCallbacks(IMainMenuActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MainMenuActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MainMenuActionsCallbackInterfaces.Add(instance);
+            @RegisterPlayer.started += instance.OnRegisterPlayer;
+            @RegisterPlayer.performed += instance.OnRegisterPlayer;
+            @RegisterPlayer.canceled += instance.OnRegisterPlayer;
+            @Choice1.started += instance.OnChoice1;
+            @Choice1.performed += instance.OnChoice1;
+            @Choice1.canceled += instance.OnChoice1;
+            @Choice2.started += instance.OnChoice2;
+            @Choice2.performed += instance.OnChoice2;
+            @Choice2.canceled += instance.OnChoice2;
+            @Choice3.started += instance.OnChoice3;
+            @Choice3.performed += instance.OnChoice3;
+            @Choice3.canceled += instance.OnChoice3;
+            @Choice4.started += instance.OnChoice4;
+            @Choice4.performed += instance.OnChoice4;
+            @Choice4.canceled += instance.OnChoice4;
+        }
+
+        private void UnregisterCallbacks(IMainMenuActions instance)
+        {
+            @RegisterPlayer.started -= instance.OnRegisterPlayer;
+            @RegisterPlayer.performed -= instance.OnRegisterPlayer;
+            @RegisterPlayer.canceled -= instance.OnRegisterPlayer;
+            @Choice1.started -= instance.OnChoice1;
+            @Choice1.performed -= instance.OnChoice1;
+            @Choice1.canceled -= instance.OnChoice1;
+            @Choice2.started -= instance.OnChoice2;
+            @Choice2.performed -= instance.OnChoice2;
+            @Choice2.canceled -= instance.OnChoice2;
+            @Choice3.started -= instance.OnChoice3;
+            @Choice3.performed -= instance.OnChoice3;
+            @Choice3.canceled -= instance.OnChoice3;
+            @Choice4.started -= instance.OnChoice4;
+            @Choice4.performed -= instance.OnChoice4;
+            @Choice4.canceled -= instance.OnChoice4;
+        }
+
+        public void RemoveCallbacks(IMainMenuActions instance)
+        {
+            if (m_Wrapper.m_MainMenuActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMainMenuActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MainMenuActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MainMenuActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MainMenuActions @MainMenu => new MainMenuActions(this);
     public interface ICombatActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnShooting(InputAction.CallbackContext context);
+    }
+    public interface IMainMenuActions
+    {
+        void OnRegisterPlayer(InputAction.CallbackContext context);
+        void OnChoice1(InputAction.CallbackContext context);
+        void OnChoice2(InputAction.CallbackContext context);
+        void OnChoice3(InputAction.CallbackContext context);
+        void OnChoice4(InputAction.CallbackContext context);
     }
 }

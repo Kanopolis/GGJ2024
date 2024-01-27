@@ -82,6 +82,42 @@ MonoBehaviour:
     m_Localized: 4
     m_Metadata:
       m_Items: []
+  - m_Id: 339141017047040
+    m_Localized: Psychedelic Plants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212864
+    m_Localized: 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212865
+    m_Localized: 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212866
+    m_Localized: 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212867
+    m_Localized: 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212868
+    m_Localized: normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212869
+    m_Localized: black-and-white
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212870
+    m_Localized: All of that while stuck in a blizzard.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339141042212871
+    m_Localized: psychedelic
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
