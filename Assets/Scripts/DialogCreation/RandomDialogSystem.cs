@@ -71,7 +71,6 @@ public partial struct RandomDialogSystem : ISystem
                 _dialogChoices3Buffer.RemoveAt(NextChoice3Id);
                 _dialogChoices4Buffer.RemoveAt(NextChoice4Id);
             }
-            UnityEngine.Debug.LogError(sortKey + " " + _entity.Index);
             ecbParallel.AddComponent<AfterRandomDialogGenerationTag>(sortKey, _entity);
         }
     }

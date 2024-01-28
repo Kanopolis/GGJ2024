@@ -71,20 +71,20 @@ public class DialogCanvasHandler : MonoBehaviour
         {
             dialogChoicesKeys[0][i] = dialogChoicesEnemyBuffer[i].Value;
         }
-        for (int i = 0; i < dialogChoicesEnemyBuffer.Length; i++)
+        for (int i = 0; i < dialogChoicesLocationBuffer.Length; i++)
         {
             dialogChoicesKeys[1][i] = dialogChoicesLocationBuffer[i].Value;
         }
-        for (int i = 0; i < dialogChoicesEnemyBuffer.Length; i++)
+        for (int i = 0; i < dialogChoicesShaderBuffer.Length; i++)
         {
             dialogChoicesKeys[2][i] = dialogChoicesShaderBuffer[i].Value;
         }
-        for (int i = 0; i < dialogChoicesEnemyBuffer.Length; i++)
+        for (int i = 0; i < dialogChoicesMusicBuffer.Length; i++)
         {
             dialogChoicesKeys[3][i] = dialogChoicesMusicBuffer[i].Value;
         }
 
-        ShuffelPlayerCardType();
+        ShuffelPlayerCardType(ref dialogChoicesKeys);
 
         m_DialogChoicesTable.GetTableAsync().Completed += x =>
         {
@@ -150,16 +150,16 @@ public class DialogCanvasHandler : MonoBehaviour
             BuildFinalDialog();
     }
 
-    private void ShuffelPlayerCardType()
+    private void ShuffelPlayerCardType(ref long[][] _dialogChoices)
     {
-        int n = m_DialogChoices.Count;
+        int n = _dialogChoices.Length;
         while (n > 1)
         {
             n--;
             int k = Random.Range(0, n + 1);
-            DialogChoice choice = m_DialogChoices[k];
-            m_DialogChoices[k] = m_DialogChoices[n];
-            m_DialogChoices[n] = choice;
+            var choice = _dialogChoices[k];
+            _dialogChoices[k] = _dialogChoices[n];
+            _dialogChoices[n] = choice;
         }
     }
 
