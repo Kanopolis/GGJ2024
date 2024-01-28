@@ -20,12 +20,12 @@ MonoBehaviour:
   m_TableData:
   - m_Id: 339201641517056
     m_Localized: "W\xE4rend die Helden den {location} \xFCberquerten, tauchte eine
-      wilde Horder {enemies} auf, mit dem Ziel ihr leben zu nehmen. Sie m\xFCssen
-      sich dem Kampf stellen unter der {shader} Sonne und zur der Musik von {music}."
+      wilde Horder {enemy} auf, mit dem Ziel ihr leben zu nehmen. Sie m\xFCssen sich
+      dem Kampf stellen unter der {shader} Sonne und zur der Musik von {music}."
     m_Metadata:
       m_Items: []
   - m_Id: 339201654099968
-    m_Localized: Test
+    m_Localized: Placeholder
     m_Metadata:
       m_Items: []
   references:
