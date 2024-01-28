@@ -60,6 +60,7 @@ Material:
     - _OverlayAmount: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 0.7
     - __dirty: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 0.724138, b: 0, a: 0}
