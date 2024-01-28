@@ -18,24 +18,26 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 339201641517056
-    m_Localized: "Auf dem Weg durch {location} erschien eine Gruppe {enemy}. Nun
-      m\xFCssen die Helden k\xE4mpfen, zu {music} Musik."
+  - m_Id: 668374249451520
+    m_Localized: "In einer legend\xE4ren Schlacht gegen eine Armee {enemy} m\xFCssen
+      unsere Helden neue Macht in der {music} Musik finden, um {location} zu retten.
+      {shader}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 668374203314176
+    m_Localized: Mit {music} Musik im Hintergrund streiten die Helden gegen eine
+      Truppe {enemy} auf der Reise durch {location}. {shader}
     m_Metadata:
       m_Items: []
   - m_Id: 339201654099968
     m_Localized: "Eine Gruppe {enemy} umzingelt die Helden auf ihrer Reise durch
-      {location}, und sie m\xFCssen sich fragen: Wer ballert diese {music} Musik?"
+      {location}, und sie m\xFCssen sich fragen: Wer ballert diese {music} Musik?
+      {shader}"
     m_Metadata:
       m_Items: []
-  - m_Id: 662776223207424
-    m_Localized: Mit {music} Musik im Hintergrund streiten die Helden gegen eine
-      Truppe {enemy} auf der Reise durch {location}.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 662776248373248
-    m_Localized: "In einer legend\xE4ren Schlacht gegen eine Armee {enemy} m\xFCssen
-      unsere Helden neue Macht in der {music} Musik finden, um {location} zu retten."
+  - m_Id: 339201641517056
+    m_Localized: "Auf dem Weg durch {location} erschien eine Gruppe {enemy}. Nun
+      m\xFCssen die Helden k\xE4mpfen, zu {music} Musik. {shader}"
     m_Metadata:
       m_Items: []
   references:

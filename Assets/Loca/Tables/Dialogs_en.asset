@@ -18,24 +18,24 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
+  - m_Id: 668374203314176
+    m_Localized: With {music} blaring in the background, the heroes fight the {enemy}
+      in the {location}. {shader}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 668374249451520
+    m_Localized: In a legendary battle against the {enemy} our heroes must find new
+      power in {music} music to save the {location}. {shader}
+    m_Metadata:
+      m_Items: []
   - m_Id: 339201654099968
     m_Localized: 'The {enemy} surrounded them in the {location} and our heroes must
-      ask themselves: Who is blasting that {music} music?'
+      ask themselves: Who is blasting that {music} music? {shader}'
     m_Metadata:
       m_Items: []
   - m_Id: 339201641517056
     m_Localized: On the way through the {location} the {enemy} appeared. Now, the
-      heroes must battle to the {music} tunes of the land.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 662776223207424
-    m_Localized: With {music} blaring in the background, the heroes fight the {enemy}
-      in the {location}.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 662776248373248
-    m_Localized: In a legendary battle against the {enemy} our heroes must find new
-      power in {music} music to save the {location}.
+      heroes must battle to the {music} tunes of the land. {shader}
     m_Metadata:
       m_Items: []
   references:

@@ -18,20 +18,20 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 18095902720
-    m_Localized: Enemy
-    m_Metadata:
-      m_Items: []
-  - m_Id: 53453885440
-    m_Localized: Music
+  - m_Id: 137893613568
+    m_Localized: Modifier
     m_Metadata:
       m_Items: []
   - m_Id: 94402875392
     m_Localized: Location
     m_Metadata:
       m_Items: []
-  - m_Id: 137893613568
-    m_Localized: Modifier
+  - m_Id: 53453885440
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18095902720
+    m_Localized: Enemy
     m_Metadata:
       m_Items: []
   references:

@@ -18,11 +18,23 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 2580840812544
-    m_Localized: Spiel starten
+  - m_Id: 330192911806470
+    m_Localized: Festgelegt
     m_Metadata:
       m_Items: []
-  - m_Id: 2580861784064
+  - m_Id: 330192911806469
+    m_Localized: "Ausgew\xE4hlt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 330192911806468
+    m_Localized: Du hast verloren!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 330192911806467
+    m_Localized: Du hast gewonnen!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 330192911806464
     m_Localized: 'Klicke
 
       [Kontroller Start
@@ -30,28 +42,16 @@ MonoBehaviour:
       Tastatur Eingabe]'
     m_Metadata:
       m_Items: []
-  - m_Id: 2580861784065
-    m_Localized: Bereit
+  - m_Id: 330192865669120
+    m_Localized: Spiel starten
     m_Metadata:
       m_Items: []
-  - m_Id: 2580861784066
+  - m_Id: 330192911806466
     m_Localized: Spiel verlassen
     m_Metadata:
       m_Items: []
-  - m_Id: 277912110075904
-    m_Localized: "Ausgew\xE4hlt"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 277963821649920
-    m_Localized: Festgelegt
-    m_Metadata:
-      m_Items: []
-  - m_Id: 311225109549056
-    m_Localized: Du hast gewonnen!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 311225130520576
-    m_Localized: Du hast verloren!
+  - m_Id: 330192911806465
+    m_Localized: Bereit
     m_Metadata:
       m_Items: []
   references:

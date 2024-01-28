@@ -18,24 +18,20 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 106718673080322
-    m_Localized: 4
+  - m_Id: 339141042212866
+    m_Localized: spaced-out Space Debris
     m_Metadata:
       m_Items: []
-  - m_Id: 106718673080321
-    m_Localized: 3
+  - m_Id: 339141042212864
+    m_Localized: infamous Fantasy Fucks
     m_Metadata:
       m_Items: []
-  - m_Id: 106718673080320
-    m_Localized: 2
+  - m_Id: 339141042212865
+    m_Localized: feared Fairtytale-Gang
     m_Metadata:
       m_Items: []
-  - m_Id: 106718635331584
-    m_Localized: 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080323
-    m_Localized: Planetoid of the Wolf Women
+  - m_Id: 339141017047040
+    m_Localized: baked Psychedelic Plants
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080324
@@ -50,72 +46,44 @@ MonoBehaviour:
     m_Localized: Megalopolis of the Anti-Astronauts
     m_Metadata:
       m_Items: []
-  - m_Id: 106718673080327
-    m_Localized: 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080328
-    m_Localized: 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080329
-    m_Localized: 3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 106718673080330
-    m_Localized: 4
+  - m_Id: 106718673080323
+    m_Localized: Planetoid of the Wolf Women
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080331
     m_Localized: scary
     m_Metadata:
       m_Items: []
+  - m_Id: 339141042212868
+    m_Localized: And did they leave the stove on?
+    m_Metadata:
+      m_Items: []
   - m_Id: 106718673080332
     m_Localized: chaotic
     m_Metadata:
       m_Items: []
-  - m_Id: 106718673080333
-    m_Localized: minimalistic
+  - m_Id: 106718673080330
+    m_Localized: And does a Lizard Wizard even have the lips to play a saxophone?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106718673080327
+    m_Localized: And should they really have eaten those strange cookies?
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080334
     m_Localized: epic
     m_Metadata:
       m_Items: []
-  - m_Id: 339141017047040
-    m_Localized: baked Psychedelic Plants
+  - m_Id: 106718673080333
+    m_Localized: minimalistic
     m_Metadata:
       m_Items: []
-  - m_Id: 339141042212864
-    m_Localized: infamous Fantasy Fucks
-    m_Metadata:
-      m_Items: []
-  - m_Id: 339141042212865
-    m_Localized: feared Fairtytale-Gang
-    m_Metadata:
-      m_Items: []
-  - m_Id: 339141042212866
-    m_Localized: spaced-out Space Debris
+  - m_Id: 339141042212871
+    m_Localized: They came to kick ass and eat flies - and they were all out of flies.
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212867
     m_Localized: Warship of War
-    m_Metadata:
-      m_Items: []
-  - m_Id: 339141042212868
-    m_Localized: normal
-    m_Metadata:
-      m_Items: []
-  - m_Id: 339141042212869
-    m_Localized: All of that happened in a black-and-white world.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 339141042212870
-    m_Localized: All of that while stuck in a blizzard.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 339141042212871
-    m_Localized: psychedelic
     m_Metadata:
       m_Items: []
   references:

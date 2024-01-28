@@ -15,35 +15,35 @@ MonoBehaviour:
   m_TableCollectionName: MenuLoca
   m_TableCollectionNameGuidString: 227c3c1dd91039d4da31f8a6f5eeaa51
   m_Entries:
-  - m_Id: 2580840812544
+  - m_Id: 330192865669120
     m_Key: StartGame
     m_Metadata:
       m_Items: []
-  - m_Id: 2580861784064
+  - m_Id: 330192911806464
     m_Key: RegisterInstructions
     m_Metadata:
       m_Items: []
-  - m_Id: 2580861784065
+  - m_Id: 330192911806465
     m_Key: Ready
     m_Metadata:
       m_Items: []
-  - m_Id: 2580861784066
+  - m_Id: 330192911806466
     m_Key: ExitGame
     m_Metadata:
       m_Items: []
-  - m_Id: 311225109549056
+  - m_Id: 330192911806467
     m_Key: Win
     m_Metadata:
       m_Items: []
-  - m_Id: 311225130520576
+  - m_Id: 330192911806468
     m_Key: Lose
     m_Metadata:
       m_Items: []
-  - m_Id: 277912110075904
+  - m_Id: 330192911806469
     m_Key: Selected
     m_Metadata:
       m_Items: []
-  - m_Id: 277963821649920
+  - m_Id: 330192911806470
     m_Key: Locked
     m_Metadata:
       m_Items: []
