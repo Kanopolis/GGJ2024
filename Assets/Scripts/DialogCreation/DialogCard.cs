@@ -16,6 +16,9 @@ public class DialogCard : MonoBehaviour
     [SerializeField]
     private LocalizeStringEvent m_CardTextLoca;
 
+    private string m_TypeIdentifier;
+    private string m_ValueIdentifier;
+
     private void Awake()
     {
         m_StateLoca.gameObject.SetActive(false);
@@ -23,6 +26,9 @@ public class DialogCard : MonoBehaviour
 
     public string SetupAndGetText(string _cardTypeLocaEntryKey, string _cardTextLocaEntryKey)
     {
+        m_TypeIdentifier = _cardTypeLocaEntryKey;
+        m_ValueIdentifier = _cardTextLocaEntryKey;
+
         m_CardTypeLoca.SetEntry(_cardTypeLocaEntryKey);
         m_CardTextLoca.SetEntry(_cardTextLocaEntryKey);
 
@@ -38,5 +44,23 @@ public class DialogCard : MonoBehaviour
     internal void Lock()
     {
         m_StateLoca.StringReference = m_LockedLoca;
+
+        switch (m_TypeIdentifier)
+        {
+            case "Enemy":
+                GameManager.SelectEnemy(m_ValueIdentifier);
+                break;
+            case "Location":
+                GameManager.SelectLocation(m_ValueIdentifier);
+                break;
+            case "Music":
+                GameManager.SelectMusic(m_ValueIdentifier);
+                break;
+            case "Shader":
+                GameManager.SelectShader(m_ValueIdentifier);
+                break;
+            default:
+                break;
+        }
     }
 }
