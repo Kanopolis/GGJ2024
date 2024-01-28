@@ -53,27 +53,45 @@ MonoBehaviour:
   - EnemyTypeIdentifier: Enemy_Fairytale
     Data:
       SpawnSettings:
-      - EnemyType: {fileID: 0}
-        SpawnCount: 0
-      - EnemyType: {fileID: 0}
-        SpawnCount: 0
-      TimeBetweenWaves: 0
-      TimeBetweenSpawns: 0
+      - EnemyType: {fileID: 5653797226109846188, guid: bf75a4d88fc60494795a29d99721cea9, type: 3}
+        SpawnCount: 20
+      - EnemyType: {fileID: 2123454896398193595, guid: 5897fcf83da16ab45b928dfa2fc9adaf, type: 3}
+        SpawnCount: 10
+      - EnemyType: {fileID: 2123454896398193595, guid: 71a10b0c324f041418a7400995407011, type: 3}
+        SpawnCount: 15
+      TimeBetweenWaves: 20
+      TimeBetweenSpawns: 0.5
   - EnemyTypeIdentifier: Enemy_Fantasy
     Data:
-      SpawnSettings: []
-      TimeBetweenWaves: 0
-      TimeBetweenSpawns: 0
+      SpawnSettings:
+      - EnemyType: {fileID: 5653797226109846188, guid: f88cc42ff98afcb4a9dfcdd39606b769, type: 3}
+        SpawnCount: 30
+      - EnemyType: {fileID: 2123454896398193595, guid: bee935a802acb414e8e9f8febb9cae21, type: 3}
+        SpawnCount: 20
+      - EnemyType: {fileID: 5653797226109846188, guid: 02d10405efc75ff42ba8e531aa614af9, type: 3}
+        SpawnCount: 10
+      TimeBetweenWaves: 10
+      TimeBetweenSpawns: 1
   - EnemyTypeIdentifier: Enemy_Plants
     Data:
-      SpawnSettings: []
-      TimeBetweenWaves: 0
-      TimeBetweenSpawns: 0
+      SpawnSettings:
+      - EnemyType: {fileID: 5653797226109846188, guid: 9970da9e5e80b1343aab8c8b74dc1ec6, type: 3}
+        SpawnCount: 20
+      - EnemyType: {fileID: 2123454896398193595, guid: b99622659f7b9064699e62bf4f5e6a88, type: 3}
+        SpawnCount: 30
+      TimeBetweenWaves: 1
+      TimeBetweenSpawns: 1
   - EnemyTypeIdentifier: Enemy_Space
     Data:
-      SpawnSettings: []
-      TimeBetweenWaves: 0
-      TimeBetweenSpawns: 0
+      SpawnSettings:
+      - EnemyType: {fileID: 5653797226109846188, guid: 7fe8bc0660bf2224282e3fc9aa535b49, type: 3}
+        SpawnCount: 20
+      - EnemyType: {fileID: 5653797226109846188, guid: 68436645a762d5d40b66dc841748d030, type: 3}
+        SpawnCount: 15
+      - EnemyType: {fileID: 2123454896398193595, guid: 734a6f23c6b3420489c19120b0d6ee80, type: 3}
+        SpawnCount: 50
+      TimeBetweenWaves: 5
+      TimeBetweenSpawns: 5
   m_LocationData:
   - LocationIdentifier: Location_One
     Data:

@@ -211,11 +211,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4255632844773606869, guid: dbbad849bb8b0ce4bb824bf8829e026f, type: 3}
       propertyPath: m_LockedLoca.m_TableEntryReference.m_KeyId
-      value: 277963821649920
+      value: 330192911806470
       objectReference: {fileID: 0}
     - target: {fileID: 4255632844773606869, guid: dbbad849bb8b0ce4bb824bf8829e026f, type: 3}
       propertyPath: m_SelectedLoca.m_TableEntryReference.m_KeyId
-      value: 277912110075904
+      value: 330192911806469
       objectReference: {fileID: 0}
     - target: {fileID: 4255632844773606869, guid: dbbad849bb8b0ce4bb824bf8829e026f, type: 3}
       propertyPath: m_LockedLoca.m_TableReference.m_TableCollectionName

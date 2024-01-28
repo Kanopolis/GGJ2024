@@ -35,6 +35,9 @@ public class DialogDatabase : MonoBehaviour
             }
             foreach (var item in (authoring.m_DialogChoiceTable.GetTable("en") as StringTable).Values)
             {
+                if (item.Key == null)
+                    continue;
+
                 if (item.Key.StartsWith("Enemy"))
                 {
                     BufferDialogChoices1.Add(new DialogChoicesEnemyBuffer() { Value = item.KeyId });
