@@ -1,5 +1,6 @@
 using Unity.Burst;
 using Unity.Entities;
+using Unity.Transforms;
 using static EnemySpawnerAuthoring;
 
 public partial class HPCheckSystem : SystemBase
@@ -13,9 +14,13 @@ public partial class HPCheckSystem : SystemBase
         EnemySpawner spawner = SystemAPI.GetSingleton<EnemySpawner>();
 
         EntityCommandBuffer entityBuffer = new EntityCommandBuffer(WorldUpdateAllocator);
-        Entities.ForEach((Entity ent, in Actor actor) =>
+        Entities.ForEach((Entity ent, in Actor actor, in LocalTransform lTrans) =>
         {
-            if(actor.CurrentHitPoints <= 0)
+            float currentHP = actor.CurrentHitPoints;
+            if (lTrans.Position.y < -2)
+                currentHP = 0;
+
+            if (currentHP <= 0)
             {
                 if (playerGroupLookup.HasComponent(ent))
                 {
