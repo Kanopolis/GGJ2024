@@ -49,53 +49,78 @@ public partial struct ProjectileCollissionSystem : ISystem
         {
             Entity hitEnt = _triggerEvent.EntityB;
             Entity projectileEnt = _triggerEvent.EntityA;
-            bool isValid = false;
-            bool hitPlayer = false;
+            bool isDamageValid = false;
+            bool destroyBlock = false;
 
             if (ProjectileGroupLookup.HasComponent(_triggerEvent.EntityA))
             {
-                if (PlayerBulletGroupLookup.HasComponent(_triggerEvent.EntityA) &&
-                    EnemyGroupLookup.HasComponent(_triggerEvent.EntityB))
+                if (PlayerBulletGroupLookup.HasComponent(_triggerEvent.EntityA))
                 {
-                    //Player Shooting Enemy
-                    isValid = true;
-                }
-                else if (EnemyBulletGroupLookup.HasComponent(_triggerEvent.EntityA) &&
-                    PlayerGroupLookup.HasComponent(_triggerEvent.EntityB))
+                    if(EnemyGroupLookup.HasComponent(_triggerEvent.EntityB))
+                    {
+                        //Player Shooting Enemy
+                        isDamageValid = true;
+                    }
+                    else if (PlayerGroupLookup.HasComponent(_triggerEvent.EntityB))
+                    {
+                        //Player Shooting Player
+                        destroyBlock = true;
+                    }
+                } 
+                else if (EnemyBulletGroupLookup.HasComponent(_triggerEvent.EntityA))
                 {
-                    //Enemy Shooting Player
-                    isValid = true;
-                    hitPlayer = true;
-                }
+                    if(PlayerGroupLookup.HasComponent(_triggerEvent.EntityB))
+                    {
+                        //Enemy Shooting Player
+                        isDamageValid = true;
+                    }
+                    else if (PlayerGroupLookup.HasComponent(_triggerEvent.EntityB))
+                    {
+                        //Enemy Shooting Enemy
+                        destroyBlock = true;
+                    }
+                }   
             }
             else if (ProjectileGroupLookup.HasComponent(_triggerEvent.EntityB))
             {
                 hitEnt = _triggerEvent.EntityA;
                 projectileEnt = _triggerEvent.EntityB;
 
-                if (PlayerBulletGroupLookup.HasComponent(_triggerEvent.EntityB) &&
-                    EnemyGroupLookup.HasComponent(_triggerEvent.EntityA))
+                if (PlayerBulletGroupLookup.HasComponent(_triggerEvent.EntityB))
                 {
-                    //Player Shooting Enemy
-                    isValid = true;
+                    if(EnemyGroupLookup.HasComponent(_triggerEvent.EntityA))
+                    {
+                        //Player Shooting Enemy
+                        isDamageValid = true;
+                    }
+                    else if(PlayerGroupLookup.HasComponent(_triggerEvent.EntityA))
+                    {
+                        //Player Shooting Player
+                        destroyBlock = true;
+                    }
                 }
-                else if (EnemyBulletGroupLookup.HasComponent(_triggerEvent.EntityB) &&
-                    PlayerGroupLookup.HasComponent(_triggerEvent.EntityA))
+                else if (EnemyBulletGroupLookup.HasComponent(_triggerEvent.EntityB))
                 {
-                    //Enemy Shooting Player
-                    isValid = true;
-                    hitPlayer = true;
+                    if (PlayerGroupLookup.HasComponent(_triggerEvent.EntityA))
+                    {
+                        //Enemy Shooting Player
+                        isDamageValid = true;
+                    }
+                    else if (EnemyGroupLookup.HasComponent(_triggerEvent.EntityA))
+                    {
+                        //Enemy Shooting Enemy
+                        destroyBlock = true;
+                    }
                 }
             }
 
-            if (isValid)
+            if (isDamageValid)
             {
                 Projectile projectile = ProjectileGroupLookup[projectileEnt];
                 Actor hitActor = ActorGroupLookup[hitEnt];
                 hitActor.CurrentHitPoints -= projectile.Damage;
 
                 ActorGroupLookup[hitEnt] = hitActor;
-
                 EntityBuffer.DestroyEntity(projectileEnt);
             }
         }
