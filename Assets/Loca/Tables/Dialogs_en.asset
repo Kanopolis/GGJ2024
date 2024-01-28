@@ -19,13 +19,13 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 339201654099968
-    m_Localized: 'As they find themselves surrounded by {enemies} in {location} our
+    m_Localized: 'As they find themselves surrounded by {enemy} in {location} our
       heroes must ask themselves: Who left the stove on? Neither the {shader} light
       nor the {music} can tell them.'
     m_Metadata:
       m_Items: []
   - m_Id: 339201641517056
-    m_Localized: As the heroes crossed the {location} a wild horde of {enemies} appeared,
+    m_Localized: As the heroes crossed the {location} a wild horde of {enemy} appeared,
       intent on taking their life. Now, they must battle under a {shader}-sun to
       the sound of {music}.
     m_Metadata:

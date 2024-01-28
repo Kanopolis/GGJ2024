@@ -1,9 +1,11 @@
 using System.Collections.Generic;
-using System.Security.Cryptography;
+using TMPro;
+using Unity.Collections;
 using Unity.Entities;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
+using UnityEngine.SceneManagement;
 
 public class DialogCanvasHandler : MonoBehaviour
 {
@@ -22,9 +24,16 @@ public class DialogCanvasHandler : MonoBehaviour
     [SerializeField]
     private LocalizeStringEvent m_FinalDialogLoca;
 
+    private Dictionary<int, int> m_CurrentSelectedDialog = new();
+    private List<int> m_PlayerWhoSelectedDialog = new();
+
     private void Awake()
     {
-        DialogCanvasHandler instance = this;
+        Instance = this;
+    }
+
+    private void Start()
+    {
         AfterRandomDialogGenerationSystem.RegisterDialogCreatedReceiver(OnDialogCreated);
     }
 
@@ -93,8 +102,52 @@ public class DialogCanvasHandler : MonoBehaviour
                     }
                 }
                 m_DialogChoices[i].Setup(dialogChoicesLocaKey, dialogChoiceTypesLocaKey);
+
+                if (i >= PlayerManager.PlayerNumber)
+                {
+                    var selectedDialog = Random.Range(0, m_DialogChoices.Count);
+                    SelectDialog(i, selectedDialog);
+                    LockDialog(i);
+                }
             }
         };
+    }
+
+    public static void SelectDialog(int _playerId, int _selectedId)
+    {
+        Instance.SelectDialogInternal(_playerId, _selectedId);
+    }
+
+    private void SelectDialogInternal(int _playerId, int _selectedId)
+    {
+        if (m_PlayerWhoSelectedDialog.Contains(_playerId))
+            return;
+
+        m_CurrentSelectedDialog[_playerId] = _selectedId;
+        m_DialogChoices[_playerId].Select(_selectedId);
+    }
+
+    public static void LockDialog(int _playerId)
+    {
+        Instance.LockDialogInternal(_playerId);
+    }
+
+    private void LockDialogInternal(int _playerId)
+    {
+        if (!m_CurrentSelectedDialog.ContainsKey(_playerId))
+            return;
+
+        var currentDialogChoice = Instance.m_DialogChoices[_playerId];
+
+        var choiceType = currentDialogChoice.ChoiceType;
+        var choiceText = currentDialogChoice.ChoiceString[m_CurrentSelectedDialog[_playerId]];
+        currentDialogChoice.Lock();
+
+        var finalDialogText = m_FinalDialogLoca.GetComponent<TextMeshProUGUI>();
+        finalDialogText.text = finalDialogText.text.Replace("{" + choiceType + "}", choiceText, System.StringComparison.OrdinalIgnoreCase);
+        m_PlayerWhoSelectedDialog.Add(_playerId);
+        if (m_PlayerWhoSelectedDialog.Count == 4)
+            BuildFinalDialog();
     }
 
     private void ShuffelPlayerCardType()
@@ -117,12 +170,19 @@ public class DialogCanvasHandler : MonoBehaviour
 
     private void BuildFinalDialog_Internal()
     {
-        //m_FinalDialogLoca.text = "Final Dialog";
         Invoke(nameof(StartBattle), 3f);
     }
 
     private void StartBattle()
     {
-        //m_FinalDialogLoca.text = "Switch to battle scene";
+        EntityCommandBuffer ecb = new(Allocator.Temp);
+        var bufferEntity = World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntityQuery(ComponentType.ReadWrite<PlayerUIInputBuffer>()).GetSingletonEntity();
+        ecb.RemoveComponent<DialogSelectionTag_Data>(bufferEntity);
+        ecb.AddComponent<IngameTag_Data>(bufferEntity);
+
+        ecb.Playback(World.DefaultGameObjectInjectionWorld.EntityManager);
+        SceneManager.LoadScene(2);
+        PlayerInputComponent.EnableCombatForAll();
+        PlayerInputComponent.DiableMainMenuForAll();
     }
 }

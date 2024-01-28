@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2329664779767794660}
   - component: {fileID: 2475749021772747266}
-  - component: {fileID: 5086482816326967665}
-  - component: {fileID: 8100901878214064731}
   - component: {fileID: 7208136945595714702}
   m_Layer: 5
   m_Name: Screen_DialogSelection
@@ -52,51 +50,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4780967873379812610}
   m_CullTransparentMesh: 1
---- !u!114 &5086482816326967665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4780967873379812610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &8100901878214064731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4780967873379812610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
-  m_UseGraphicAlpha: 0
 --- !u!114 &7208136945595714702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,8 +141,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -256,6 +209,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2329664779767794660}
     m_Modifications:
+    - target: {fileID: 4255632844773606869, guid: dbbad849bb8b0ce4bb824bf8829e026f, type: 3}
+      propertyPath: m_LockedLoca.m_TableEntryReference.m_KeyId
+      value: 277963821649920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255632844773606869, guid: dbbad849bb8b0ce4bb824bf8829e026f, type: 3}
+      propertyPath: m_SelectedLoca.m_TableEntryReference.m_KeyId
+      value: 277912110075904
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255632844773606869, guid: dbbad849bb8b0ce4bb824bf8829e026f, type: 3}
+      propertyPath: m_LockedLoca.m_TableReference.m_TableCollectionName
+      value: GUID:227c3c1dd91039d4da31f8a6f5eeaa51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255632844773606869, guid: dbbad849bb8b0ce4bb824bf8829e026f, type: 3}
+      propertyPath: m_SelectedLoca.m_TableReference.m_TableCollectionName
+      value: GUID:227c3c1dd91039d4da31f8a6f5eeaa51
+      objectReference: {fileID: 0}
     - target: {fileID: 7808474616358638375, guid: dbbad849bb8b0ce4bb824bf8829e026f, type: 3}
       propertyPath: m_Name
       value: DialogCard_01
