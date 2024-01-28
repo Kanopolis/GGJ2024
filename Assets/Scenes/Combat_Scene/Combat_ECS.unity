@@ -26747,13 +26747,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b9e64e722ffc343826196bf06932e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TimeBetweenWaves: 5
-  m_TimeBetweenSpawns: 1
+  m_TimeBetweenWaves: 3
+  m_TimeBetweenSpawns: 0.5
   m_Waves:
   - EnemyType: {fileID: 5653797226109846188, guid: 7fe8bc0660bf2224282e3fc9aa535b49, type: 3}
-    SpawnCount: 5
+    SpawnCount: 30
   - EnemyType: {fileID: 2123454896398193595, guid: b99622659f7b9064699e62bf4f5e6a88, type: 3}
-    SpawnCount: 5
+    SpawnCount: 20
 --- !u!1001 &1007091952
 PrefabInstance:
   m_ObjectHideFlags: 0

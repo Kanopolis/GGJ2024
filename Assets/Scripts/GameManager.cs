@@ -79,10 +79,10 @@ public class GameManager : MonoBehaviour
     private static readonly Dictionary<string, MusicDataIntern> Musics = new();
     private static readonly Dictionary<string, ShaderDataIntern> Shaders = new();
 
-    public static EnemyTypeDataIntern SelectedEnemyTypeData;
-    public static LocationDataIntern SelectedLocationData;
-    public static MusicDataIntern SelectedMusicData;
-    public static ShaderDataIntern SelectedShaderData;
+    public static EnemyTypeDataIntern SelectedEnemyTypeData { get; private set; }
+    public static LocationDataIntern SelectedLocationData { get; private set; }
+    public static MusicDataIntern SelectedMusicData { get; private set; }
+    public static ShaderDataIntern SelectedShaderData { get; private set; }
 
     private static AudioSource m_AudioSource;
 

@@ -59,7 +59,7 @@ MonoBehaviour:
         SpawnCount: 10
       - EnemyType: {fileID: 2123454896398193595, guid: 71a10b0c324f041418a7400995407011, type: 3}
         SpawnCount: 15
-      TimeBetweenWaves: 20
+      TimeBetweenWaves: 2
       TimeBetweenSpawns: 0.5
   - EnemyTypeIdentifier: Enemy_Fantasy
     Data:
@@ -70,7 +70,7 @@ MonoBehaviour:
         SpawnCount: 20
       - EnemyType: {fileID: 5653797226109846188, guid: 02d10405efc75ff42ba8e531aa614af9, type: 3}
         SpawnCount: 10
-      TimeBetweenWaves: 10
+      TimeBetweenWaves: 3
       TimeBetweenSpawns: 1
   - EnemyTypeIdentifier: Enemy_Plants
     Data:
@@ -90,7 +90,7 @@ MonoBehaviour:
         SpawnCount: 15
       - EnemyType: {fileID: 2123454896398193595, guid: 734a6f23c6b3420489c19120b0d6ee80, type: 3}
         SpawnCount: 50
-      TimeBetweenWaves: 5
+      TimeBetweenWaves: 2
       TimeBetweenSpawns: 5
   m_LocationData:
   - LocationIdentifier: Location_One

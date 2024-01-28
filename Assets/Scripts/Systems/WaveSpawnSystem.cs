@@ -11,7 +11,6 @@ public partial struct WaveSpawnSystem : ISystem
         
     }
 
-    [BurstCompile]
     public void OnUpdate(ref SystemState _state)
     {
         EntityCommandBuffer entBuffer = new EntityCommandBuffer(_state.WorldUpdateAllocator);

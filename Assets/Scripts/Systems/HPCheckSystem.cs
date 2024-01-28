@@ -10,7 +10,6 @@ public partial class HPCheckSystem : SystemBase
         RequireForUpdate<EnemySpawner>();
     }
 
-    [BurstCompile]
     protected override void OnUpdate()
     {
         ComponentLookup<Player> playerGroupLookup = SystemAPI.GetComponentLookup<Player>();
