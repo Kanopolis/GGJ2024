@@ -65,6 +65,7 @@ public class PlayerInputComponent : MonoBehaviour
 
     public static void EndGame()
     {
+        m_AvailablePlayerInputs = new();
         foreach (var item in m_AvailablePlayerInputs)
         {
             item.Value.DeactivateInput();

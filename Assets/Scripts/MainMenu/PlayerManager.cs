@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private PlayerManager m_Instance;
+    private static PlayerManager m_Instance;
 
     [SerializeField]
     private PlayerRegistrationScreen[] m_RegistrationScreens;
@@ -37,5 +37,10 @@ public class PlayerManager : MonoBehaviour
     public void OnPlayerLeft()
     {
         Debug.LogError("PlayerLeft");
+    }
+
+    public static void EndGame()
+    {
+        Destroy(m_Instance.gameObject);
     }
 }

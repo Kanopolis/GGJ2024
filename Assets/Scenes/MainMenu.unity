@@ -2152,20 +2152,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2416052286181018733, guid: a962816837c02c545965c235f3b0559a, type: 3}
-      propertyPath: m_MusicData.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2416052286181018733, guid: a962816837c02c545965c235f3b0559a, type: 3}
-      propertyPath: m_ShaderData.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2416052286181018733, guid: a962816837c02c545965c235f3b0559a, type: 3}
-      propertyPath: m_LocationData.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2416052286181018733, guid: a962816837c02c545965c235f3b0559a, type: 3}
-      propertyPath: m_EnemyTypeData.Array.size
-      value: 1
+      propertyPath: m_ShaderData.Array.data[4].ShaderIdentifier
+      value: Shader_Two
       objectReference: {fileID: 0}
     - target: {fileID: 8729322972037191514, guid: a962816837c02c545965c235f3b0559a, type: 3}
       propertyPath: m_Name

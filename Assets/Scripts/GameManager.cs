@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static EnemySpawnerAuthoring;
 
 [Serializable]
 public struct EnemyTypeData
@@ -14,7 +16,9 @@ public struct EnemyTypeData
 [Serializable]
 public struct EnemyTypeDataIntern
 {
-    public int SpawnNumber;
+    public SEnemyWaveSettings[] SpawnSettings;
+    public float TimeBetweenWaves;
+    public float TimeBetweenSpawns;
 }
 
 [Serializable]
@@ -40,7 +44,7 @@ public struct MusicData
 [Serializable]
 public struct MusicDataIntern
 {
-    public int SpawnNumber;
+    public AudioClip MusicClip;
 }
 
 [Serializable]
@@ -79,6 +83,8 @@ public class GameManager : MonoBehaviour
     public static LocationDataIntern SelectedLocationData;
     public static MusicDataIntern SelectedMusicData;
     public static ShaderDataIntern SelectedShaderData;
+
+    private static AudioSource m_AudioSource;
 
     private void Awake()
     {
@@ -124,6 +130,12 @@ public class GameManager : MonoBehaviour
             SelectedMusicData = Musics[_musicIdentifier];
         else
             SelectedMusicData = Musics.Values.ToArray()[0];
+
+        m_AudioSource = new GameObject("BGM").AddComponent<AudioSource>();
+        m_AudioSource.clip = SelectedMusicData.MusicClip;
+        m_AudioSource.loop = true;
+        m_AudioSource.Play();
+        DontDestroyOnLoad(m_AudioSource.gameObject);
     }
 
     public static void SelectShader(string _shaderIdentifier)
@@ -132,5 +144,20 @@ public class GameManager : MonoBehaviour
             SelectedShaderData = Shaders[_shaderIdentifier];
         else
             SelectedShaderData = Shaders.Values.ToArray()[0];
+    }
+
+    public static void EndGame()
+    {
+        SelectedEnemyTypeData = new();
+        SelectedLocationData = new();
+        SelectedMusicData = new();
+        SelectedShaderData = new();
+
+        Destroy(m_AudioSource.gameObject);
+
+        PlayerInputComponent.EndGame();
+        PlayerManager.EndGame();
+
+        SceneManager.LoadScene(0);
     }
 }

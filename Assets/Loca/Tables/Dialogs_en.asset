@@ -19,15 +19,23 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 339201654099968
-    m_Localized: 'As they find themselves surrounded by {enemy} in {location} our
-      heroes must ask themselves: Who left the stove on? Neither the {shader} light
-      nor the {music} can tell them.'
+    m_Localized: 'The {enemy} surrounded them in the {location} and our heroes must
+      ask themselves: Who is blasting that {music} music?'
     m_Metadata:
       m_Items: []
   - m_Id: 339201641517056
-    m_Localized: As the heroes crossed the {location} a wild horde of {enemy} appeared,
-      intent on taking their life. Now, they must battle under a {shader}-sun to
-      the sound of {music}.
+    m_Localized: On the way through the {location} the {enemy} appeared. Now, the
+      heroes must battle to the {music} tunes of the land.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 662776223207424
+    m_Localized: With {music} blaring in the background, the heroes fight the {enemy}
+      in the {location}.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 662776248373248
+    m_Localized: In a legendary battle against the {enemy} our heroes must find new
+      power in {music} music to save the {location}.
     m_Metadata:
       m_Items: []
   references:

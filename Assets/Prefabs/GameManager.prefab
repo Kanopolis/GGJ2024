@@ -49,3 +49,67 @@ MonoBehaviour:
   - {r: 1, g: 0.59607846, b: 0.28627452, a: 1}
   - {r: 0.39607844, g: 1, b: 0.3764706, a: 1}
   - {r: 0.39215687, g: 0.9843137, b: 1, a: 1}
+  m_EnemyTypeData:
+  - EnemyTypeIdentifier: Enemy_Fairytale
+    Data:
+      SpawnSettings:
+      - EnemyType: {fileID: 0}
+        SpawnCount: 0
+      - EnemyType: {fileID: 0}
+        SpawnCount: 0
+      TimeBetweenWaves: 0
+      TimeBetweenSpawns: 0
+  - EnemyTypeIdentifier: Enemy_Fantasy
+    Data:
+      SpawnSettings: []
+      TimeBetweenWaves: 0
+      TimeBetweenSpawns: 0
+  - EnemyTypeIdentifier: Enemy_Plants
+    Data:
+      SpawnSettings: []
+      TimeBetweenWaves: 0
+      TimeBetweenSpawns: 0
+  - EnemyTypeIdentifier: Enemy_Space
+    Data:
+      SpawnSettings: []
+      TimeBetweenWaves: 0
+      TimeBetweenSpawns: 0
+  m_LocationData:
+  - LocationIdentifier: Location_One
+    Data:
+      SpawnNumber: 0
+  - LocationIdentifier: Location_Two
+    Data:
+      SpawnNumber: 0
+  - LocationIdentifier: Location_Three
+    Data:
+      SpawnNumber: 0
+  - LocationIdentifier: Location_Four
+    Data:
+      SpawnNumber: 0
+  m_MusicData:
+  - MusicIdentifier: Music_Epic
+    Data:
+      MusicClip: {fileID: 8300000, guid: a33de992138f0b5459a018e46ad1b132, type: 3}
+  - MusicIdentifier: Music_Scary
+    Data:
+      MusicClip: {fileID: 8300000, guid: 861c3e7f53ecb6a4d8a9c7004d9210c1, type: 3}
+  - MusicIdentifier: Music_Minimalistic
+    Data:
+      MusicClip: {fileID: 8300000, guid: 11d4b10281717704fb9519b01fa71ac6, type: 3}
+  - MusicIdentifier: Music_Chaotic
+    Data:
+      MusicClip: {fileID: 8300000, guid: dfba3df749d606c40a735a08d400317a, type: 3}
+  m_ShaderData:
+  - ShaderIdentifier: Shader_One
+    Data:
+      SpawnNumber: 0
+  - ShaderIdentifier: Shader_Two
+    Data:
+      SpawnNumber: 0
+  - ShaderIdentifier: Shader_Three
+    Data:
+      SpawnNumber: 0
+  - ShaderIdentifier: Shader_Four
+    Data:
+      SpawnNumber: 0

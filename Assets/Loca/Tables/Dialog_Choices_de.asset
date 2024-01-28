@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080323
-    m_Localized: 1
+    m_Localized: die Welt der Wolfs-Frauen
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080324
@@ -43,11 +43,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080325
-    m_Localized: 3
+    m_Localized: das Kriegsschiff des Riesen-Seesterns
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080326
-    m_Localized: 4
+    m_Localized: die Megalopolis der Anti-Astronauten
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080327
@@ -67,39 +67,39 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080331
-    m_Localized: 1
+    m_Localized: gruseliger
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080332
-    m_Localized: 2
+    m_Localized: chaotischer
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080333
-    m_Localized: 3
+    m_Localized: minimalistischer
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080334
-    m_Localized: 4
+    m_Localized: epischer
     m_Metadata:
       m_Items: []
   - m_Id: 339141017047040
-    m_Localized: Psychedelische Pflanzen
+    m_Localized: "zugred\xF6hnte Psychedelische Pflanzen"
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212864
-    m_Localized: 2
+    m_Localized: "ber\xFCchtigte Fantasie-Ficker"
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212865
-    m_Localized: 3
+    m_Localized: "gef\xFCrchtete M\xE4rchen-Biester"
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212866
-    m_Localized: 4
+    m_Localized: abgespacter Weltraumschrott
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212867
-    m_Localized: 1
+    m_Localized: das Kriegschiff des Krieges
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212868

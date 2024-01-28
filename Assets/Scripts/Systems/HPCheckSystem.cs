@@ -5,6 +5,11 @@ using static EnemySpawnerAuthoring;
 
 public partial class HPCheckSystem : SystemBase
 {
+    protected override void OnCreate()
+    {
+        RequireForUpdate<EnemySpawner>();
+    }
+
     [BurstCompile]
     protected override void OnUpdate()
     {

@@ -4,6 +4,11 @@ using static EnemySpawnerAuthoring;
 
 public partial class UpdateUISystem : SystemBase
 {
+    protected override void OnCreate()
+    {
+        RequireForUpdate<EnemySpawner>();
+    }
+
     [BurstCompile]
     protected override void OnUpdate()
     {

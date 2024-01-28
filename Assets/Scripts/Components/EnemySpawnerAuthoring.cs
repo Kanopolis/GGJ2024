@@ -1,5 +1,3 @@
-using System;
-using Unity.Collections;
 using Unity.Entities;
 using UnityEngine;
 
@@ -11,6 +9,16 @@ public class EnemySpawnerAuthoring : MonoBehaviour
     public float m_TimeBetweenSpawns;
     [SerializeField]
     private SEnemyWaveSettings[] m_Waves;
+
+    private void Awake()
+    {
+        if (GameManager.SelectedEnemyTypeData.SpawnSettings[0].EnemyType != null)
+        {
+            m_TimeBetweenWaves = GameManager.SelectedEnemyTypeData.TimeBetweenWaves;
+            m_TimeBetweenSpawns = GameManager.SelectedEnemyTypeData.TimeBetweenSpawns;
+            m_Waves = GameManager.SelectedEnemyTypeData.SpawnSettings;
+        }
+    }
 
     public class Baker : Baker<EnemySpawnerAuthoring>
     {

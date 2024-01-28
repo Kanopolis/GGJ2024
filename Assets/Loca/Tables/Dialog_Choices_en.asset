@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080323
-    m_Localized: 1
+    m_Localized: Planetoid of the Wolf Women
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080324
@@ -43,11 +43,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080325
-    m_Localized: 3
+    m_Localized: Warship of the Giant Starfish
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080326
-    m_Localized: 4
+    m_Localized: Megalopolis of the Anti-Astronauts
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080327
@@ -67,39 +67,39 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080331
-    m_Localized: 1
+    m_Localized: scary
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080332
-    m_Localized: 2
+    m_Localized: chaotic
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080333
-    m_Localized: 3
+    m_Localized: minimalistic
     m_Metadata:
       m_Items: []
   - m_Id: 106718673080334
-    m_Localized: 4
+    m_Localized: epic
     m_Metadata:
       m_Items: []
   - m_Id: 339141017047040
-    m_Localized: Psychedelic Plants
+    m_Localized: baked Psychedelic Plants
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212864
-    m_Localized: 2
+    m_Localized: infamous Fantasy Fucks
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212865
-    m_Localized: 3
+    m_Localized: feared Fairtytale-Gang
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212866
-    m_Localized: 4
+    m_Localized: spaced-out Space Debris
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212867
-    m_Localized: 1
+    m_Localized: Warship of War
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212868
@@ -107,7 +107,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212869
-    m_Localized: black-and-white
+    m_Localized: All of that happened in a black-and-white world.
     m_Metadata:
       m_Items: []
   - m_Id: 339141042212870
