@@ -15,15 +15,5 @@ public class MainMenuTag : MonoBehaviour
 
 public struct MainMenuTag_Data : IComponentData
 {
-    
-}
-
-public struct DialogSelectionTag_Data : IComponentData
-{
-
-}
-
-public struct IngameTag_Data : IComponentData
-{
 
 }

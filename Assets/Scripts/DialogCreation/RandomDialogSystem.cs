@@ -6,13 +6,18 @@ using Unity.Mathematics;
 [BurstCompile]
 public partial struct RandomDialogSystem : ISystem
 {
+    public void OnCreate(ref SystemState _state)
+    {
+        _state.RequireForUpdate<DialogReturnValue_Data>();
+    }
+
     [BurstCompile]
     public void OnUpdate(ref SystemState _state)
     {
         _state.Enabled = false;
         EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.TempJob);
 
-        var random = Unity.Mathematics.Random.CreateFromIndex((uint)UnityEngine.Random.Range(0,1000));
+        var random = Random.CreateFromIndex((uint)UnityEngine.Random.Range(0,1000));
 
         RandomDialogSystemJob job = new()
         {
@@ -66,6 +71,7 @@ public partial struct RandomDialogSystem : ISystem
                 _dialogChoices3Buffer.RemoveAt(NextChoice3Id);
                 _dialogChoices4Buffer.RemoveAt(NextChoice4Id);
             }
+            UnityEngine.Debug.LogError(sortKey + " " + _entity.Index);
             ecbParallel.AddComponent<AfterRandomDialogGenerationTag>(sortKey, _entity);
         }
     }

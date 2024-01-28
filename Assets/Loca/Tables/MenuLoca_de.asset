@@ -38,6 +38,14 @@ MonoBehaviour:
     m_Localized: Spiel Verlassen
     m_Metadata:
       m_Items: []
+  - m_Id: 277912110075904
+    m_Localized: "Ausgew\xE4hlt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 277963821649920
+    m_Localized: Festgelegt
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
